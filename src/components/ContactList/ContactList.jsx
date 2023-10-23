@@ -6,7 +6,7 @@ import { ContactListContainer } from './ContactList.styles';
 
 
 const ContactList = () => {
-  const contacts = useSelector(getContacts);
+  const {contacts} = useSelector(getContacts);
   const filter = useSelector(getFilter);
 
   const filteredContacts = (filter, contacts) => {

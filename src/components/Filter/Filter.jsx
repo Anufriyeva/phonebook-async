@@ -1,9 +1,11 @@
 import React from 'react';
 import {Label, Input} from '../ContactForm/ContactForm.styles';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'store/filterSlice';
+import { getFilter } from 'store/selectors';
 
-const Filter = ({ filter }) => {
+const Filter = () => {
+  const filter = useSelector(getFilter);
 
   const dispatch = useDispatch();
 
